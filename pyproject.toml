@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "overtaking-tracker"
+version = "1.0.0"
+description = "Modular LiDAR multi-object tracker used for the analysis of overtaking manoeuvres"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "Marvin Götze", email = "marvin.goetze@salzburgresearch.at" }
+]
+dependencies = [
+    "numpy>=1.23",
+    "pandas>=1.5",
+]
+
+[project.optional-dependencies]
+eval = ["motmetrics>=1.4"]
+plot = ["matplotlib>=3.5"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
